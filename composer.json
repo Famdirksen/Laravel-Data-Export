@@ -1,0 +1,53 @@
+{
+    "name": "famdirksen/laravel-data-export",
+    "type": "library",
+    "description": "Laravel package to export model attributes",
+    "keywords": [
+        "Famdirksen"
+    ],
+    "homepage": "https://github.com/Famdirksen/Laravel-Data-Export",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robin Dirksen",
+            "email": "info@famdirksen.nl",
+            "homepage": "https://www.famdirksen.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~7.0|~7.1|~7.2",
+        "maatwebsite/excel": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : ">=5.4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Famdirksen\\LaravelDataExport\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Famdirksen\\LaravelDataExport\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Famdirksen\\LaravelDataExport\\LaravelDataExportServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
